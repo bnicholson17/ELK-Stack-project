@@ -83,17 +83,21 @@ You'll then need to follow the below steps ;
 - start and attach your ansible container 
 - $ sudo docker start [container name]  
 - $ sudo docker attach [container name] 
-- Update the hosts file to specify which VM's to run the playbook on (nano /etc/ansible/hosts) you should list the IP's of the VM's you wish to run the playbooks on. 
+- Update the hosts file to specify which VM's to run the playbook on. To do this use to
 - $ nano /etc/ansible/hosts
 - run the playbooks :
   -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
   -                                    $ ansible-playbook /etc/ansible/install_metricbeat.yml 
 																			
-Head to your browser and enter http://[your.VM.IP]:5601/app/kibanato check if the playbooks have run succesfully. The webpage should appear and you should be able to use
+Head to your browser and type - http://[your.VM.IP]:5601/app/kibana - to check if the playbooks have run succesfully. The webpage should appear and you should be able to use
 filebeat and metric beat to capture and monitor data from your webservers. 
 
-See examples of Kibana's home screen and confirmation of filbeat and metricbeat working correctly.
+We should now have 3 functioning web servers, placed behind a load balancer, which we are now able to monitor using the beats we have installed.
+
+
+See examples of Kibana's home screen and confirmation of filebeat and metricbeat working correctly.
+
 
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Kabana/Kibana_Home.PNG)
 
