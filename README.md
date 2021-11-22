@@ -14,7 +14,7 @@ This document contains the following details:
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/3ae29553949d05b0e857c258de5a5ee74b032d8f/Network%20Diagram/Network_diagram.PNG)
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/5ff4591f5b505d4b51870017ca2c9f68c3e153f6/Network%20Diagram/Network-diagram.PNG)
 
 
 
