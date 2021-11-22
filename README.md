@@ -3,7 +3,6 @@ cyber security ELK-Stack project
 
 This document contains the following details:
 
-
 - Description of the Topologu
 - Access Policies
 - ELK Configuration
@@ -19,7 +18,7 @@ The files in this repository were used to configure the network depicted below.
 
 
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network. Load ballancers 
 ensure that web traffic will be processed and shared by all 3 vulnerable web servers. The Access controls in place ensure that only authorized 
@@ -29,7 +28,7 @@ as well as watching system metrics.
 - Filebeat watches and monitors log files and collects log events.
 - Metricbeat collects metrics and statistics. Metricbeat allows you to monitor services and system usage on your servers. 
 
-The configuration details of each machine may be found below.
+The configuration details of each virtual machine may be found below.
 
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/c1f33143337686c8f21d599a8e76d5d409b40cda/extra%20screenshots/VM-table.PNG)
 ### Access Policies
@@ -37,14 +36,17 @@ The configuration details of each machine may be found below.
 The web servers on the internal network are not publicly accessable. They can only be accessed via the ansible container installed on the jumpbox via ssh.
 Only the JumpBox via port 22 and the ELK server via port 5601 are publicly accessable, although inbound security rules ensure only my private IP has access. 
 
+In addtion to being accessable via port 5601, the ELK server can also be accessed by using ssh from the JumpBox. 
+
 A summary of the access policies in place can be found in the table below.
 
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/f618ac3615800730aca27471f23f52bc84c688ab/extra%20screenshots/access_policy.PNG)
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/49c20d7bd71cad59dfa0fb2c6696ecfa4524ac6a/extra%20screenshots/access-policy.PNG)
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. This was advantageious as no configuration was performed manually, which allowed me to save a lot
-of time configuring and deploying the ansible playbooks. 
+Ansible was used to automate configuration of the ELK machine. This was advantageous as no configuration was performed manually. 
+Only small changes are needed from playbook to playbook which is a fantastic time saver. 
+
 The playbook implements the following tasks:
 
 -  Install Docker (eg. docker.io)  
@@ -80,17 +82,20 @@ In order to use the Playbooks we have created, you first need to ssh into your A
 You'll then need to follow the below steps ;
 - start and attach your ansible container ( sudo docker start [container name] ) ( sudo docker attach [container name] )
 - Update the hosts file to specify which VM's to run the playbook on (nano /etc/ansible/hosts) you should list the IP's of the VM's you wish to run the playbooks on. 
-- run the playbooks ;
-                                      $ ansible-playbook install_elk.yml elk
-                                       $ ansible-playbook install_filebeat.yml webservers
-                                       $ ansible-playbook install_metricbeat.yml webservers
+- run the playbooks :
+  -                                    $ ansible-playbook install_elk.yml elk
+  -                                    $ ansible-playbook install_filebeat.yml webservers
+  -                                    $ ansible-playbook install_metricbeat.yml webservers
 																			
-Head to your browser and enter http://20.211.184.156:5601/app/kibana to check if the playbooks have run succesfully. The webpage should appear and you should be able to use
+Head to your browser and enter http://[your.VM.IP]:5601/app/kibanato check if the playbooks have run succesfully. The webpage should appear and you should be able to use
 filebeat and metric beat to capture and monitor data from your webservers. 
 
-See example of Kibana's home screen and webserver traffic being captured.
+See examples of Kibana's home screen and confirmation of filbeat and metricbeat working correctly.
+
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Kabana/Kibana_Home.PNG)
+
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/a3470454c3f4a50b3b6247f564dc0ffc21bc71cc/Kabana/CHECK_DATA_1.PNG)
+
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/a3470454c3f4a50b3b6247f564dc0ffc21bc71cc/Kabana/CHECK_DATA_2.PNG)
 
 
