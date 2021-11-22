@@ -31,14 +31,7 @@ as well as watching system metrics.
 
 The configuration details of each machine may be found below.
 
-| Name           | Function   | IP Address | Operating System |
-|----------------- |-----------------|--------------|----------|
-| Jump Box    | Gateway     | 10.0.0.4   | Linux  |
-| Web-1         | Web Server | 10.0.0.5   | Linux  |
-| Web-2         | Web Server | 10.0.0.6   | Linux  |
-| Web-3         | Web Server | 10.0.0.9   | Linux  |
-| ELK-Server |Monitoring    | 10.1.0.5   | Linux  |
-
+[!Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/c1f33143337686c8f21d599a8e76d5d409b40cda/extra%20screenshots/VM-table.PNG)
 ### Access Policies
 
 The web servers on the internal network are not publicly accessable. They can only be accessed via the ansible container installed on the jumpbox via ssh.
@@ -46,13 +39,7 @@ Only the JumpBox via port 22 and the ELK server via port 5601 are publicly acces
 
 A summary of the access policies in place can be found in the table below.
 
-| Name           | Publicly Accessible | Allowed IP Address |
-|------------------|---------------------------|---------------------------|
-| Jump Box     |         YES                | 14.2.53.191            |
-| Web-1          |          NO                 | 10.0.0.4                  |
-| Web-2          |          NO                 | 10.0.0.4                  |
-| Web-3          |          NO                 | 10.0.0.4                  |
-| ELK-Server  |         YES                | 14.2.53.191            |
+[!Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/c1f33143337686c8f21d599a8e76d5d409b40cda/extra%20screenshots/access_policy.PNG)
 
 ### Elk Configuration
 
