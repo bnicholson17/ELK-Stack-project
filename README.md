@@ -83,8 +83,9 @@ You'll then need to follow the below steps ;
 - start and attach your ansible container 
 - $ sudo docker start [container name]  
 - $ sudo docker attach [container name] 
-- Update the hosts file to specify which VM's to run the playbook on. To do this use to
+- Update the hosts file to specify which VM's to run the playbook on. 
 - $ nano /etc/ansible/hosts
+- ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
 - run the playbooks :
   -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
