@@ -80,12 +80,15 @@ sudo commands, SSH logins or new users and groups created.
 In order to use the Playbooks we have created, you first need to ssh into your Ansible control node, which in this case is our JumpBox ( ssh RedAdmin@52.189.250.82 )
 
 You'll then need to follow the below steps ;
-- start and attach your ansible container ( sudo docker start [container name] ) ( sudo docker attach [container name] )
+- start and attach your ansible container 
+- $ sudo docker start [container name]  
+- $ sudo docker attach [container name] 
 - Update the hosts file to specify which VM's to run the playbook on (nano /etc/ansible/hosts) you should list the IP's of the VM's you wish to run the playbooks on. 
+- $ nano /etc/ansible/hosts
 - run the playbooks :
-  -                                    $ ansible-playbook install_elk.yml elk
-  -                                    $ ansible-playbook install_filebeat.yml webservers
-  -                                    $ ansible-playbook install_metricbeat.yml webservers
+  -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
+  -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
+  -                                    $ ansible-playbook /etc/ansible/install_metricbeat.yml 
 																			
 Head to your browser and enter http://[your.VM.IP]:5601/app/kibanato check if the playbooks have run succesfully. The webpage should appear and you should be able to use
 filebeat and metric beat to capture and monitor data from your webservers. 
