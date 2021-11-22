@@ -1,7 +1,6 @@
 # ELK-Stack-project
 cyber security ELK-Stack project
 
-    ## Automated ELK Stack Deployment
 This document contains the following details:
 
 
@@ -18,7 +17,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/76d13076342bf09a10d6cfa82616cc7a4f483b4e/Network%20Diagram/Network_diagram.PNG)
 
-https://github.com/bnicholson17/ELK-Stack-project/blob/76d13076342bf09a10d6cfa82616cc7a4f483b4e/Network%20Diagram/Network_diagram.PNG
+
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
@@ -69,7 +68,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Images/docker-ps.PNG
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Images/docker-ps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -94,19 +93,19 @@ In order to use the Playbooks we have created, you first need to ssh into your A
 You'll then need to follow the below steps ;
 - start and attach your ansible container ( sudo docker start [container name] ) ( sudo docker attach [container name] )
 - Update the hosts file to specify which VM's to run the playbook on (nano /etc/ansible/hosts) you should list the IP's of the VM's you wish to run the playbooks on. 
-- run the playbooks eg . $ ansible-playbook install_elk.yml elk
+- run the playbooks ;
+                                      $ ansible-playbook install_elk.yml elk
                                        $ ansible-playbook install_filebeat.yml webservers
                                        $ ansible-playbook install_metricbeat.yml webservers
 																			
-In this instance we have run the install elk , install filebe
+Head to your browser and enter http://20.211.184.156:5601/app/kibana to check if the playbooks have run succesfully. The webpage should appear and you should be able to use
+filebeat and metric beat to capture and monitor data from your webservers. 
 
-See example of Kibana's home screen https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Kabana/Kibana_Home.PNG
+See example of Kibana's home screen and webserver traffic being captured.
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Kabana/Kibana_Home.PNG)
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/a3470454c3f4a50b3b6247f564dc0ffc21bc71cc/Kabana/CHECK_DATA_1.PNG)
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/a3470454c3f4a50b3b6247f564dc0ffc21bc71cc/Kabana/CHECK_DATA_2.PNG)
 
 
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
     
 
