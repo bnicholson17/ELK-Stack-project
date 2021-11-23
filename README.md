@@ -1,7 +1,6 @@
 # ELK-Stack-project
-cyber security ELK-Stack project
 
-This document contains the following details:
+***This document contains the following details:***
 
 - Description of the Topologu
 - Access Policies
@@ -51,13 +50,12 @@ The playbook implements the following tasks:
 
 -  Install Docker (eg. docker.io)  
 -  Install python3-pip
--  Install Docker python module  pip
--  download and launch a docker (sebp/elk:761sebp/elk:761 )
--  enable service docker on boot
+-  Download and launch a docker (sebp/elk:761)
+-  Enable service docker on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Images/docker-ps.PNG)
+![Docker_ps](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Images/docker-ps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -80,12 +78,11 @@ sudo commands, SSH logins or new users and groups created.
 In order to use the Playbooks we have created, you first need to ssh into your Ansible control node, which in this case is our JumpBox ( ssh RedAdmin@52.189.250.82 )
 
 You'll then need to follow the below steps ;
-- start and attach your ansible container 
-- $ sudo docker start [container name]  
-- $ sudo docker attach [container name] 
-- Update the hosts file to specify which VM's to run the playbook on. 
-- $ nano /etc/ansible/hosts
+- Start your Ansible container  > sudo docker start [container name] 
+- Attach your Ansible container > sudo docker attach [container name] 
+- Update the hosts file to specify which VM's to run the playbook on > nano /etc/ansible/hosts
 - ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
+- update the config files to include the ELK severs private IP.
 - run the playbooks :
   -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
