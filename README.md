@@ -65,15 +65,14 @@ This ELK server is configured to monitor the following machines:
 - web-3 10.0.0.9
 
 We have installed the following Beats on these machines:
-- Metricbeat
-- Filebeat
+- ***Metricbeat***
+- ***Filebeat***
 
 These Beats allow us to collect the following information from each machine:
 
-- Filebeats captures and monitor log files that you specify, and forwards them either to Elasticsearch or Logstash for indexing. For example capturing syslogs can allow us to monitor
-sudo commands, SSH logins or new users and groups created. 
+- ***Filebeat*** is a lightweight shipper for forwarding and centralizing log data. Filebeat captures and monitor log files that you specify, and forwards them either to Elasticsearch or Logstash for indexing. For example Filebeat allows you to monitor syslogs to detect various things such as sudo commands or SSH logins. 
 
-- Metricbeats allow you to collect metrics from the operating systems and services running on the server your'e monitoring. For example you can monitor CPU usage and or RAM statistics. 
+- ***Metricbeat*** is a lightweight shipper that collects metrics from the oprating system and from services running on a server. For example Metricbeat allows you to monitor CPU usage and RAM statistics.
 
 ### Using the Playbook
 In order to use the Playbooks we have created, you first need to ssh into your Ansible control node, which in this case is our JumpBox ( ssh RedAdmin@52.189.250.82 )
@@ -84,6 +83,7 @@ You'll then need to follow the below steps ;
 - Update the hosts file to specify which VM's to run the playbook on  (nano /etc/ansible/hosts)
 - ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
 - update the config files to include the ELK severs private IP.
+- Ensure the playbooks are in the file location stated in the config files.
 - run the playbooks :
   -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 

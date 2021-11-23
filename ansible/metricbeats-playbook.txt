@@ -1,4 +1,3 @@
-root@cd6c2fdbf61a:~# cat /etc/ansible/metricbeat-playbook.yml
 ---
 - name: Install metric beat
   hosts: webservers
