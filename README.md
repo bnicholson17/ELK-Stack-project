@@ -29,7 +29,7 @@ as well as watching system metrics.
 
 The configuration details of each virtual machine may be found below.
 
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/c1f33143337686c8f21d599a8e76d5d409b40cda/extra%20screenshots/VM-table.PNG)
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/72a684ca0f849d877251cd9d5ac57c4589068b5f/extra%20screenshots/VMtable.PNG)
 ### Access Policies
 
 The web servers on the internal network are not publicly accessable. They can only be accessed via the ansible container installed on the jumpbox via ssh.
