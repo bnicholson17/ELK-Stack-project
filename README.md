@@ -2,7 +2,7 @@
 
 ***This document contains the following details:***
 
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
 - Beats in Use
@@ -43,8 +43,9 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. This was advantageous as no configuration was performed manually. 
-Only small changes are needed from playbook to playbook which is a fantastic time saver. 
+Ansible was used to automate configuration of the ELK machine. Using Ansible playbooks allow us to automate the configuration of multiple servers at the same time.
+This is extremtly time-efficient and saves us from having to manually configure each server. In addition to this, Ansible playbooks are human readable, allowing users to easily write and edit
+playbooks and configuration files. 
 
 The playbook implements the following tasks:
 
