@@ -19,7 +19,7 @@ The files in this repository were used to configure the network depicted below.
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network. Load ballancers 
+Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network. Load balancers 
 ensure that web traffic will be processed and shared by all 3 vulnerable web servers. The Access controls in place ensure that only authorized 
 users are able to connect.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network 
@@ -32,10 +32,10 @@ The configuration details of each virtual machine may be found below.
 ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/72a684ca0f849d877251cd9d5ac57c4589068b5f/extra%20screenshots/VMtable.PNG)
 ### Access Policies
 
-The web servers on the internal network are not publicly accessable. They can only be accessed via the ansible container installed on the jumpbox via ssh.
-Only the JumpBox via port 22 and the ELK server via port 5601 are publicly accessable, although inbound security rules ensure only my private IP has access. 
+The web servers on the internal network are not publicly accessible. They can only be accessed via the ansible container installed on the jumpbox via ssh.
+Only the JumpBox via port 22 and the ELK server via port 5601 are publicly accessible, although inbound security rules ensure only my private IP has access. 
 
-In addtion to being accessable via port 5601, the ELK server can also be accessed by using ssh from the JumpBox. 
+In addition to being accessible via port 5601, the ELK server can also be accessed by using ssh from the JumpBox. 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -44,7 +44,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. Using Ansible playbooks allow us to automate the configuration of multiple servers at the same time.
-This is extremtly time-efficient and saves us from having to manually configure each server. In addition to this, Ansible playbooks are human readable, allowing users to easily write and edit
+This is extremely time-efficient and saves us from having to manually configure each server. In addition to this, Ansible playbooks are human readable, allowing users to easily write and edit
 playbooks and configuration files. 
 
 The playbook implements the following tasks:
@@ -72,7 +72,7 @@ These Beats allow us to collect the following information from each machine:
 
 - ***Filebeat*** is a lightweight shipper for forwarding and centralizing log data. Filebeat captures and monitor log files that you specify, and forwards them either to Elasticsearch or Logstash for indexing. For example Filebeat allows you to monitor syslogs to detect various things such as sudo commands or SSH logins. 
 
-- ***Metricbeat*** is a lightweight shipper that collects metrics from the oprating system and from services running on a server. For example Metricbeat allows you to monitor CPU usage and RAM statistics.
+- ***Metricbeat*** is a lightweight shipper that collects metrics from the operating system and from services running on a server. For example Metricbeat allows you to monitor CPU usage and RAM statistics.
 
 ### Using the Playbook
 In order to use the Playbooks we have created, you first need to ssh into your Ansible control node, which in this case is our JumpBox ( ssh RedAdmin@52.189.250.82 )
@@ -89,7 +89,7 @@ You'll then need to follow the below steps ;
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
   -                                    $ ansible-playbook /etc/ansible/install_metricbeat.yml 
 																			
-Head to your browser and type - http://[your.VM.IP]:5601/app/kibana - to check if the playbooks have run succesfully. The webpage should appear and you should be able to use
+Head to your browser and type - http://[your.VM.IP]:5601/app/kibana - to check if the playbooks have run successfully The webpage should appear and you should be able to use
 filebeat and metricbeat to capture and monitor data from your webservers. 
 
 We should now have 3 functioning web servers, placed behind a load balancer, which we are now able to monitor using the beats we have installed.
