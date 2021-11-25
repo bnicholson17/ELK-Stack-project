@@ -13,7 +13,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/5ff4591f5b505d4b51870017ca2c9f68c3e153f6/Network%20Diagram/Network-diagram.PNG)
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/2f63038347b753f5a4656f024a8e8fd9cd47a24e/Network%20Diagram/Diagram.PNG)
 
 
 
