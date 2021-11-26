@@ -35,4 +35,3 @@
       name: metricbeat
       enabled: yes
 
-root@cd6c2fdbf61a:~#
