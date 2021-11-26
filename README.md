@@ -89,9 +89,9 @@ You'll then need to follow the below steps ;
 - Attach your Ansible container (sudo docker attach container name) 
 - Update the hosts file to add the webservers and ELK server  (nano /etc/ansible/hosts)
  ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
-- update the config files to include the ELK severs private IP.
+- Update the config files to include the ELK severs private IP.
 - Ensure the playbooks are in the file location stated in the config files.
-- run the playbooks :
+- Run the playbooks :
   -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
   -                                    $ ansible-playbook /etc/ansible/install_metricbeat.yml 
