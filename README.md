@@ -96,16 +96,6 @@ Head to your browser and enter - http://[your.VM.IP]:5601/app/kibana - to verify
 We should now have 3 functioning web servers, placed behind a load balancer, which we are now able to monitor using the beats we have installed.
 
 
-See examples of Kibana's home screen and confirmation of filebeat and metricbeat working correctly.
-
-
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/46d43788de748132acb32aa5d374afc48c481eab/Kabana/Kibana_Home.PNG)
-
-
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/a3470454c3f4a50b3b6247f564dc0ffc21bc71cc/Kabana/CHECK_DATA_1.PNG)
-
-
-![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/a3470454c3f4a50b3b6247f564dc0ffc21bc71cc/Kabana/CHECK_DATA_2.PNG)
 
 
     
