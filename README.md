@@ -83,7 +83,7 @@ You'll then need to follow the below steps ;
 - Start your Ansible container  (sudo docker start container name)
 - Attach your Ansible container (sudo docker attach container name) 
 - Update the hosts file to add the webservers and ELK server  (nano /etc/ansible/hosts)
-- ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
+ ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
 - update the config files to include the ELK severs private IP.
 - Ensure the playbooks are in the file location stated in the config files.
 - run the playbooks :
