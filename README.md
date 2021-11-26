@@ -91,9 +91,8 @@ You'll then need to follow the below steps ;
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
   -                                    $ ansible-playbook /etc/ansible/install_metricbeat.yml 
 																			
-Head to your browser and enter - http://[your.VM.IP]:5601/app/kibana - to verify that the playbooks have run successfully. The webpage should appear and you should be able to use filebeat and metricbeat to capture and monitor data from your webservers. 
+Head to your browser and enter - http://[your.VM.IP]:5601/app/kibana - to verify that the playbooks have run successfully. The webpage should appear and you should be able to use filebeat and metricbeat to capture and monitor data from your webservers.
 
-We should now have 3 functioning web servers, placed behind a load balancer, which we are now able to monitor using the beats we have installed.
 
 
 
