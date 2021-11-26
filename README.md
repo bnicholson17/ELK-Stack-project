@@ -25,6 +25,8 @@ Load balancing ensures that the application will be highly available, in additio
 ensures that web traffic will be processed and shared by all 3 vulnerable web servers, which protects the availablity of data, meaning authorized users have access to the systems and resources they need.
 The Access controls in place ensure that only authorized users are able to connect. 
 
+In order to connect to the webserver VM's and the ELK-VM within our network, we first need to log into our JumpBox. Our JumpBox allows us to create a secure perimetre around our other VM's within the virtual network, whilst also streamlining logging in, and performing administrative tasks on other machines within the network. 
+
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network 
 as well as watching system metrics.
 - Filebeat watches and monitors log files and collects log events.
@@ -54,6 +56,8 @@ The playbook implements the following tasks:
 
 -  Install Docker (eg. docker.io)  
 -  Install python3-pip
+-  Install Docker module
+-  Increase virtual memory
 -  Download and launch a docker (sebp/elk:761)
 -  Enable service docker on boot
 
