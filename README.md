@@ -17,7 +17,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-https://github.com/bnicholson17/ELK-Stack-project/blob/7ed232fd39c5daa8b698df57329d3c1264ca71d2/Ansible/playbooks/install-elk.txt
+![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/7ed232fd39c5daa8b698df57329d3c1264ca71d2/Ansible/playbooks/install-elk.txt)
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
 
