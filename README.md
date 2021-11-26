@@ -21,9 +21,10 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network. Load balancers 
-ensure that web traffic will be processed and shared by all 3 vulnerable web servers. The Access controls in place ensure that only authorized 
-users are able to connect.
+Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network. The use of  a load balancer on this network
+ensures that web traffic will be processed and shared by all 3 vulnerable web servers, which protects the availablity of data, meaning authorized users have access to the systems and resources they need.
+The Access controls in place ensure that only authorized users are able to connect. 
+
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network 
 as well as watching system metrics.
 - Filebeat watches and monitors log files and collects log events.
