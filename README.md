@@ -85,18 +85,22 @@ These Beats allow us to collect the following information from each machine:
 In order to use the Playbooks we have created, you first need to ssh into your Ansible control node, which in this case is our JumpBox ( ssh RedAdmin@52.189.250.82 )
 
 You'll then need to follow the below steps ;
+- Search for your Ansbible container ( sudo docker container list -a )
 - Start your Ansible container  (sudo docker start container name)
 - Attach your Ansible container (sudo docker attach container name) 
 - Update the hosts file to add the webservers and ELK server  (nano /etc/ansible/hosts)
  ![Diagram](https://github.com/bnicholson17/ELK-Stack-project/blob/4841b51bb14c7305227133e73e2f82cf7cde317c/extra%20screenshots/host-config.PNG)
 - Update the config files to include the ELK severs private IP.
-- Ensure the playbooks are in the file location stated in the config files.
 - Run the playbooks :
   -                                    $ ansible-playbook /etc/ansible/install_elk.yml 
   -                                    $ ansible-playbook /etc/ansible/install_filebeat.yml 
   -                                    $ ansible-playbook /etc/ansible/install_metricbeat.yml 
 																			
-Head to your browser and enter - http://[your.VM.IP]:5601/app/kibana - to verify that the playbooks have run successfully. The webpage should appear and you should be able to use filebeat and metricbeat to capture and monitor data from your webservers.
+Head to your browser and enter - http://[your.VM.IP]:5601/app/kibana - to verify that the playbooks have run successfully. The webpage should appear and you should be able to use filebeat and metricbeat to capture and monitor log & metric data from your webservers.
+
+![kibana](https://github.com/bnicholson17/ELK-Stack-project/blob/237ee293d5053d956ddd6a17ac94a7fc227bfba3/Images/Kibana_Home.PNG)
+
+
 
 
 
